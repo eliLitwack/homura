@@ -273,7 +273,7 @@ class Homura(object):
                 if interval < 0.5:
                     return
                 self._last_time = current_time
-            p = (self.progress_template + '\n') % params
+            p = ("\r" + self.progress_template) % params
         STREAM.write(p)
         STREAM.flush()
 
